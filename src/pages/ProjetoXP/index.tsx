@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router'
+import { useEffect } from 'react'
 import XPLogo from '../../assets/XpLogo.png'
 import BetNacionalLogo from '../../assets/betNacionalLogo.png'
 import CimedLogo from '../../assets/cimedLogo.png'
@@ -10,8 +11,18 @@ import CaptacaoVideo from '../../assets/captacao-e-edicao-atuacao-movimento-verd
 export function ProjectXP() {
     const navigate = useNavigate();
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const handleBackToHome = () => {
-        navigate('/');
+        navigate('/', { replace: true });
+        setTimeout(() => {
+            const portfolioSection = document.getElementById('portfolio');
+            if (portfolioSection) {
+                portfolioSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 100);
     };
 
     return (

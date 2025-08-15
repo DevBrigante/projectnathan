@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router";
+import { useEffect } from 'react'
 import CopaFeminina23 from '../../assets/fotoCopa.jpg'
 import CopaFemininaVideo from '../../assets/GuaranaAntartica.mp4'
 import GuaranaLogo from '../../assets/guaranaLogo.png'
@@ -8,8 +9,18 @@ import CimedLogo from '../../assets/cimedLogo.png'
 export function CopaFeminina() {
     const navigate = useNavigate();
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const handleBackToHome = () => {
-        navigate('/');
+        navigate('/', { replace: true });
+        setTimeout(() => {
+            const portfolioSection = document.getElementById('portfolio');
+            if (portfolioSection) {
+                portfolioSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 100);
     };
 
     return (

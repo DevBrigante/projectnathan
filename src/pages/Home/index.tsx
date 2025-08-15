@@ -4,10 +4,9 @@ import { Typing } from "../../components/Typing"
 import { Accordion } from "../../components/Accordion"
 import { ImagePass } from "../../components/ImagePass"
 import { GridImages } from "../../components/GridImages"
-
-import FotoPerfil from '../../assets/fotoPerfil.png'
 import { CoberturaRealTime } from "../../components/CoberturasRealTime"
 import { ContactForm } from "../../components/ContactForm"
+import FotoPerfil from '../../assets/fotoPerfil.png'
 
 export function Home() {
     return (

@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router";
+import { useEffect } from 'react'
 import MellowVideo1 from '../../assets/MellowVideos/08.10.mp4'
 import MellowVideo2 from '../../assets/MellowVideos/Vídeo-Extra1.mp4'
 import MellowVideo3 from '../../assets/MellowVideos/copy-2d3392c5-33cd-4346-8cf9-edd5af855521_GAhIZAlw.mp4'
@@ -9,8 +10,18 @@ import MellowVideo6 from '../../assets/MellowVideos/videos-discos-1_nXg5EMrc.mp4
 export function MellowProject() {
     const navigate = useNavigate();
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     const handleBackToHome = () => {
-        navigate('/');
+        navigate('/', { replace: true });
+        setTimeout(() => {
+            const portfolioSection = document.getElementById('portfolio');
+            if (portfolioSection) {
+                portfolioSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        }, 100);
     };
 
     return (
