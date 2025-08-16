@@ -65,7 +65,6 @@ export function ArsenalProject() {
                 <p className="mt-2 sm:mt-3 text-sm sm:text-base">Produção, Direção Criativa, Captação e Edição</p>
             </div>
 
-            {/* Parte onde começa as fotos */}
             <div className="max-w-full mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-6 sm:mt-8 flex flex-col mb-8 sm:mb-12 md:mb-16">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
                     <div className="group overflow-hidden rounded-lg bg-zinc-800 aspect-video hover:scale-105 transition-transform duration-300">
@@ -121,13 +120,10 @@ export function ArsenalProject() {
                     </div>
                 </div>
             </div>
-            {/* Parte onde termina as fotos */}
-
             <div className="max-w-6xl mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-8 sm:mt-10 md:mt-12 flex flex-col">
                 <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">Projeto do Mar - Marseille</h2>
                 <p className="mt-2 sm:mt-3 text-sm sm:text-base">Produção, Assistente de direção e Modelagem</p>
             </div>
-            {/* Parte onde começa as fotos */}
             <div className="max-w-full mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-6 sm:mt-8 flex flex-col mb-8 sm:mb-12 md:mb-16">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
                     <div className="group overflow-hidden rounded-lg bg-zinc-800 aspect-video hover:scale-105 transition-transform duration-300">
@@ -172,7 +168,6 @@ export function ArsenalProject() {
                     </div>
                 </div>
             </div>
-            {/* Parte onde termina as fotos */}
             <div className="max-w-6xl mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-8 sm:mt-10 md:mt-12 flex flex-col">
                 <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">Projeto vivências do Futebol</h2>
                 <p className="mt-2 sm:mt-3 text-sm sm:text-base">Direção Criativa, Captação e Edição</p>

@@ -47,7 +47,7 @@ export const ContactForm = () => {
         setFormStatus({ isLoading: true, message: '', type: '' })
 
         try {
-            // Configurações do EmailJS - configure no arquivo .env
+
             const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
             const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
             const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
@@ -253,7 +253,6 @@ export const ContactForm = () => {
                                 />
                             </div>
 
-                            {/* Mensagem de status */}
                             {formStatus.message && (
                                 <div className={`p-4 rounded-lg text-center font-medium ${
                                     formStatus.type === 'success' 
@@ -264,7 +263,6 @@ export const ContactForm = () => {
                                 </div>
                             )}
 
-                            {/* Botão de envio */}
                             <button
                                 type="submit"
                                 disabled={formStatus.isLoading}

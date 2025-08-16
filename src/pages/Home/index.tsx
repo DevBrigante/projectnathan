@@ -49,7 +49,6 @@ export function Home() {
                     <Accordion />
                 </div>
 
-                {/* Seção Portfólio */}
                 <div id="portfolio">
                     <ImagePass />
                     <GridImages />

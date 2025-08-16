@@ -3,7 +3,6 @@ export function Footer() {
         <footer className="bg-zinc-900 w-full py-10 border-t border-zinc-700">
             <div className="max-w-6xl mx-auto px-4">
                 <div className="flex flex-col items-center justify-center space-y-4">
-                    {/* Credits in one line */}
                     <div className="flex flex-col sm:flex-row items-center justify-center space-y-2 sm:space-y-0 sm:space-x-8 text-sm">
                         <div className="flex items-center space-x-2">
                             <span className="text-zinc-400">Desenvolvimento:</span>
@@ -27,7 +26,6 @@ export function Footer() {
                         </div>
                     </div>
                     
-                    {/* Copyright */}
                     <div className="text-zinc-500 text-xs text-center">
                         © {new Date().getFullYear()} Nathan de Assis - Todos os direitos reservados
                     </div>

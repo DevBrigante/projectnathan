@@ -6,10 +6,8 @@ export const NotFound = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-zinc-900 via-zinc-800 to-black flex flex-col">
-            {/* Main content */}
             <div className="flex-1 flex items-center justify-center px-4 py-16">
                 <div className="max-w-2xl w-full text-center">
-                    {/* Animated 404 */}
                     <div className="relative mb-8">
                         <h1 className="text-9xl md:text-[12rem] font-black text-transparent bg-clip-text bg-gradient-to-r from-yellow via-yellow to-amber-300 animate-pulse">
                             404
@@ -19,7 +17,6 @@ export const NotFound = () => {
                         </div>
                     </div>
                     
-                    {/* Error message */}
                     <div className="space-y-6 mb-12">
                         <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                             Página não encontrada
@@ -29,7 +26,6 @@ export const NotFound = () => {
                         </p>
                     </div>
                     
-                    {/* Action buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                         <button
                             onClick={() => navigate("/", { replace: true })}
@@ -47,7 +43,6 @@ export const NotFound = () => {
                         </button>
                     </div>
                     
-                    {/* Decorative elements */}
                     <div className="mt-16 flex justify-center space-x-2">
                         <div className="w-2 h-2 bg-yellow rounded-full animate-bounce"></div>
                         <div className="w-2 h-2 bg-yellow rounded-full animate-bounce" style={{animationDelay: '0.1s'}}></div>

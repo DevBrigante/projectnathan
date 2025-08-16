@@ -86,7 +86,6 @@ export function ProjectXP() {
             </div>
             <div className="max-w-full mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-8 sm:mt-12 md:mt-16 lg:mt-20 flex flex-col mb-8 sm:mb-12 md:mb-16">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
-                    {/* Image 1 */}
                     <div className="group overflow-hidden rounded-lg bg-zinc-800 aspect-video hover:scale-105 transition-transform duration-300">
                         <img
                             src={XPimage}
@@ -114,7 +113,6 @@ export function ProjectXP() {
                         />
                     </div>
 
-                    {/* Video */}
                     <div className="group overflow-hidden rounded-lg bg-zinc-800 aspect-video hover:scale-105 transition-transform duration-300 md:col-span-2 lg:col-span-1">
                         <video
                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
