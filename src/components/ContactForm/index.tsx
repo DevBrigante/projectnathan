@@ -1,11 +1,18 @@
 import { useState } from 'react'
-import { RiPhoneFill, RiMailFill, RiInstagramFill, RiVideoFill, RiShareFill, RiMovieFill, RiLightbulbFill } from '@remixicon/react'
+import { RiPhoneFill, RiMailFill, RiInstagramFill, RiVideoFill, RiShareFill, RiMovieFill, RiLightbulbFill, RiSendPlaneFill } from '@remixicon/react'
+import emailjs from '@emailjs/browser'
 
 interface FormData {
     name: string
     email: string
     phone: string
     projectDescription: string
+}
+
+interface FormStatus {
+    isLoading: boolean
+    message: string
+    type: 'success' | 'error' | ''
 }
 
 export const ContactForm = () => {
@@ -16,12 +23,70 @@ export const ContactForm = () => {
         projectDescription: ''
     })
 
+    const [formStatus, setFormStatus] = useState<FormStatus>({
+        isLoading: false,
+        message: '',
+        type: ''
+    })
+
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target
         setFormData(prev => ({
             ...prev,
             [name]: value
         }))
+        
+        if (formStatus.message) {
+            setFormStatus({ isLoading: false, message: '', type: '' })
+        }
+    }
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault()
+        
+        setFormStatus({ isLoading: true, message: '', type: '' })
+
+        try {
+            // Configurações do EmailJS - configure no arquivo .env
+            const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID
+            const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID
+            const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY
+
+            if (!serviceId || !templateId || !publicKey) {
+                throw new Error('Configurações do EmailJS não encontradas. Verifique o arquivo .env')
+            }
+
+            const templateParams = {
+                from_name: formData.name,
+                from_email: formData.email,
+                phone: formData.phone,
+                message: formData.projectDescription,
+                to_email: 'nathansantos1201@gmail.com'
+            }
+
+            await emailjs.send(serviceId, templateId, templateParams, publicKey)
+            
+            setFormStatus({
+                isLoading: false,
+                message: 'Mensagem enviada com sucesso! Entrarei em contato em breve.',
+                type: 'success'
+            })
+            
+            setFormData({
+                name: '',
+                email: '',
+                phone: '',
+                projectDescription: ''
+            })
+            
+        } catch (error) {
+            console.error('Erro ao enviar email:', error)
+            setFormStatus({
+                isLoading: false,
+                message: 'Erro ao enviar mensagem. Tente novamente ou entre em contato diretamente.',
+                type: 'error'
+            })
+        }
     }
 
     return (
@@ -122,7 +187,7 @@ export const ContactForm = () => {
                     <div className="relative z-10">
                         <h3 className="text-2xl font-semibold text-center text-black mb-8 animate-fadeIn">Vamos trabalhar juntos</h3>
 
-                        <form className="space-y-6 animate-fadeIn" style={{ animationDelay: "0.2s" }}>
+                        <form className="space-y-6 animate-fadeIn" style={{ animationDelay: "0.2s" }} onSubmit={handleSubmit}>
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                                     Nome completo
@@ -177,12 +242,50 @@ export const ContactForm = () => {
                                     Sobre seu projeto
                                 </label>
                                 <textarea
+                                    id="projectDescription"
+                                    name="projectDescription"
+                                    value={formData.projectDescription}
+                                    onChange={handleInputChange}
                                     required
                                     rows={5}
                                     className="w-full px-4 py-3 border border-gray-300 rounded-lg resize-none outline-none"
                                     placeholder="Conte-me sobre seu projeto, objetivos e como posso te ajudar..."
                                 />
                             </div>
+
+                            {/* Mensagem de status */}
+                            {formStatus.message && (
+                                <div className={`p-4 rounded-lg text-center font-medium ${
+                                    formStatus.type === 'success' 
+                                        ? 'bg-green-100 text-green-800 border border-green-200' 
+                                        : 'bg-red-100 text-red-800 border border-red-200'
+                                }`}>
+                                    {formStatus.message}
+                                </div>
+                            )}
+
+                            {/* Botão de envio */}
+                            <button
+                                type="submit"
+                                disabled={formStatus.isLoading}
+                                className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-3 ${
+                                    formStatus.isLoading
+                                        ? 'bg-gray-400 cursor-not-allowed'
+                                        : 'bg-yellow hover:bg-yellow/90 hover:scale-[1.02] active:scale-[0.98]'
+                                } text-black shadow-lg`}
+                            >
+                                {formStatus.isLoading ? (
+                                    <>
+                                        <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin"></div>
+                                        <span>Enviando...</span>
+                                    </>
+                                ) : (
+                                    <>
+                                        <RiSendPlaneFill size={20} />
+                                        <span className='cursor-pointer'>Enviar Mensagem</span>
+                                    </>
+                                )}
+                            </button>
                         </form>
                     </div>
                 </div>
