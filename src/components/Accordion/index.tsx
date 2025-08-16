@@ -42,7 +42,7 @@ export const Accordion = () => {
             {accordionData.map((item, i) => {
                 const isOpen = openIndex === i;
                 return (
-                    <div key={i} className="cursor-pointer w-[30%] border-b border-gray-700 pb-2 transition-all duration-300 hover:border-gray-500">
+                    <div key={i} className="cursor-pointer w-[40%] border-b border-gray-700 pb-2 transition-all duration-300 hover:border-gray-500">
                         <button
                             onClick={() => toggle(i)}
                             className="flex items-center justify-between bg-transparent text-white border-none text-[30px] font-bold w-full cursor-pointer transition-colors duration-300 hover:text-gray-300">

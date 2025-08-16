@@ -3,6 +3,14 @@ import { useEffect } from 'react'
 import ImageProjetoArsenal from '../../assets/ProjetosPessoais/Projeto Arsenal_ o Clube de todos - Produção e Modelo Grupal.jpg'
 import ImageProjetoArsenal2 from '../../assets/ProjetosPessoais/Projeto Arsenal_ o Clube de todos - Produção e Modelo.jpg'
 import ProjetoArsenalVideo from '../../assets/ProjetosPessoais/projeto-arsenal-o-clube-de-todos-producao-direcao-criativa-captacao_.mp4'
+import ImageProjetoMar from '../../assets/ProjetosPessoais/Projeto do Mar, Marseille - Produção e Modelo (1).jpg'
+import ImageProjetoMar2 from '../../assets/ProjetosPessoais/Projeto do Mar, Marseille - Produção e Modelo (2).jpg'
+import ImageProjetoMar3 from '../../assets/ProjetosPessoais/Projeto do Mar, Marseille - Produção e Modelo.jpg'
+import ProjetoVivenciaVideo from '../../assets/ProjetosPessoais/Projeto Vivências do Futebol - Dir Criativa, Captação e Edição (1).mp4'
+import ProjetoVivenciaVideo2 from '../../assets/ProjetosPessoais/Projeto Vivências do Futebol - Dir Criativa.mp4'
+import ProjetoVivenciaVideo3 from '../../assets/ProjetosPessoais/Projeto Vivências do Futebol - Dir Criativa, Captação e Edição.mp4'
+
+
 
 export function ArsenalProject() {
     const navigate = useNavigate();
@@ -22,7 +30,7 @@ export function ArsenalProject() {
     };
     
     return (
-        <div className="h-screen w-full max-w-full bg-zinc-900 text-white flex flex-col">
+        <div className="h-full w-full max-w-full bg-zinc-900 text-white flex flex-col">
             <div className="absolute top-6 left-6 z-10">
                 <button
                     onClick={handleBackToHome}
@@ -51,18 +59,21 @@ export function ArsenalProject() {
                 <h1 className="text-white text-4xl font-bold">PROJETOS PESSOAIS</h1>
                 <p className="mt-2 text-white text-xl w-[80%] text-balanc">Aqui um espaço onde crio além da demanda, crio por inspiração e amor a arte.</p>
             </div>
-             <div className="max-w-6xl mx-30 mt-34 flex flex-row">
+             <div className="max-w-6xl mx-30 mt-20 flex flex-row">
                 <h2 className="text-white text-4xl font-bold">Projeto Arsenal - O clube de todos</h2>
             </div>
             <div className="mx-30 mt-3 flex flex-col">
-                <p className=" text-sm">Produção, Direção Criativa, Captação e Edição</p>
+                <p className="text-base">Produção, Direção Criativa, Captação e Edição</p>
             </div>
+
+            {/* Parte onde começa as fotos */}
             <div className="max-w-full mx-30 mt-12 sm:mt-16 lg:mt-8 flex flex-col mb-16">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
                     <div className="group overflow-hidden rounded-lg bg-zinc-800 aspect-video hover:scale-105 transition-transform duration-300">
                         <img
                             src={ImageProjetoArsenal}
-                            alt="Jogos pan americano 2023"
+                            alt="Imagem do projeto Arsenal"
+
                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                             loading="lazy"
                             decoding="async"
@@ -75,7 +86,7 @@ export function ArsenalProject() {
                     <div className="group overflow-hidden rounded-lg bg-zinc-800 aspect-video hover:scale-105 transition-transform duration-300">
                         <img
                             src={ImageProjetoArsenal2}
-                            alt="Imagem havaianas"
+                            alt="Imagem do projeto Arsenal"
                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                             loading="lazy"
                             decoding="async"
@@ -111,6 +122,144 @@ export function ArsenalProject() {
                     </div>
                 </div>
             </div>
+            {/* Parte onde termina as fotos */}
+
+            <div className="max-w-6xl mx-30 mt-12 flex flex-row">
+                <h2 className="text-white text-4xl font-bold">Projeto do Mar, Marseille</h2>
+            </div>
+            <div className="mx-30 mt-3 flex flex-col">
+                <p className=" text-base">Produção, Assistente de direção e Modelagem</p>
+            </div>
+            {/* Parte onde começa as fotos */}
+            <div className="max-w-full mx-30 mt-12 sm:mt-16 lg:mt-8 flex flex-col mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                    <div className="group overflow-hidden rounded-lg bg-zinc-800 aspect-video hover:scale-105 transition-transform duration-300">
+                        <img
+                            src={ImageProjetoMar}
+                            alt="Imagem do projeto Mar"
+
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            loading="lazy"
+                            decoding="async"
+                            style={{
+                                filter: 'contrast(1.05) saturate(1.1) brightness(1.02)',
+                                imageRendering: 'crisp-edges'
+                            }}
+                        />
+                    </div>
+                    <div className="group overflow-hidden rounded-lg bg-zinc-800 aspect-video hover:scale-105 transition-transform duration-300">
+                        <img
+                            src={ImageProjetoMar2}
+                            alt="Imagem do projeto Mar"
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            loading="lazy"
+                            decoding="async"
+                            style={{
+                                filter: 'contrast(1.05) saturate(1.1) brightness(1.02)',
+                                imageRendering: 'crisp-edges'
+                            }}
+                        />
+                    </div>
+                    <div className="group overflow-hidden rounded-lg bg-zinc-800 aspect-video hover:scale-105 transition-transform duration-300">
+                        <img
+                            src={ImageProjetoMar3}
+                            alt="Imagem do projeto Mar"
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            loading="lazy"
+                            decoding="async"
+                            style={{
+                                filter: 'contrast(1.05) saturate(1.1) brightness(1.02)',
+                                imageRendering: 'crisp-edges'
+                            }}
+                        />
+                    </div>
+                </div>
+            </div>
+            {/* Parte onde termina as fotos */}
+            <div className="max-w-6xl mx-30 mt-12 flex flex-row">
+                <h2 className="text-white text-4xl font-bold">Projeto vivências do Futebol</h2>
+            </div>
+            <div className="mx-30 mt-3 flex flex-col">
+                <p className="text-base">Direção Criativa, Captação e Edição</p>
+            </div>
+            <div className="max-w-full mx-30 mt-12 sm:mt-16 lg:mt-8 flex flex-col mb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+                    <div className="group overflow-hidden rounded-lg bg-zinc-800 aspect-video hover:scale-105 transition-transform duration-300 md:col-span-2 lg:col-span-1">
+                        <video
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            preload="metadata"
+                            style={{
+                                filter: 'contrast(1.1) saturate(1.2) brightness(1.05)',
+                                imageRendering: 'crisp-edges'
+                            }}
+                            onLoadStart={(e) => {
+                                const video = e.target as HTMLVideoElement;
+                                video.playbackRate = 1;
+                            }}
+                            onCanPlay={(e) => {
+                                const video = e.target as HTMLVideoElement;
+                                video.style.opacity = '1';
+                            }}
+                        >
+                            <source src={ProjetoVivenciaVideo} type="video/mp4" />
+                        </video>
+                    </div> 
+                    <div className="group overflow-hidden rounded-lg bg-zinc-800 aspect-video hover:scale-105 transition-transform duration-300 md:col-span-2 lg:col-span-1">
+                        <video
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            preload="metadata"
+                            style={{
+                                filter: 'contrast(1.1) saturate(1.2) brightness(1.05)',
+                                imageRendering: 'crisp-edges'
+                            }}
+                            onLoadStart={(e) => {
+                                const video = e.target as HTMLVideoElement;
+                                video.playbackRate = 1;
+                            }}
+                            onCanPlay={(e) => {
+                                const video = e.target as HTMLVideoElement;
+                                video.style.opacity = '1';
+                            }}
+                        >
+                            <source src={ProjetoVivenciaVideo2} type="video/mp4" />
+                        </video>
+                    </div> 
+                    <div className="group overflow-hidden rounded-lg bg-zinc-800 aspect-video hover:scale-105 transition-transform duration-300 md:col-span-2 lg:col-span-1">
+                        <video
+                            className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                            autoPlay
+                            muted
+                            loop
+                            playsInline
+                            preload="metadata"
+                            style={{
+                                filter: 'contrast(1.1) saturate(1.2) brightness(1.05)',
+                                imageRendering: 'crisp-edges'
+                            }}
+                            onLoadStart={(e) => {
+                                const video = e.target as HTMLVideoElement;
+                                video.playbackRate = 1;
+                            }}
+                            onCanPlay={(e) => {
+                                const video = e.target as HTMLVideoElement;
+                                video.style.opacity = '1';
+                            }}
+                        >
+                            <source src={ProjetoVivenciaVideo3} type="video/mp4" />
+                        </video>
+                    </div> 
+                </div>
+
+            </div>
+
         </div>
     )
 }
