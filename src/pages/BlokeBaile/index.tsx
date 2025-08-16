@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router'
 import { useEffect } from 'react'
+import { Footer } from '../../components/Footer'
 import BlokeBaileVideo1 from '../../assets/BlokeBaile/BlokeVideo1.mp4'
 import BlokeBaileImage from '../../assets/projetoBloke.jpg'
 import BlokeBaileImage2 from '../../assets/BlokeBaile/BlokeFoto1.jpg'
@@ -177,6 +178,8 @@ const navigate = useNavigate();
                     </div>
                 </div>
             </div>
+            
+            <Footer />
         </div>
     )
 }

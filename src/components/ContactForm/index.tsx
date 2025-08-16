@@ -90,55 +90,55 @@ export const ContactForm = () => {
     }
 
     return (
-        <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-16">
-            <div className="text-center mb-16">
-                <h2 className="text-5xl md:text-6xl font-bold text-black mb-4 tracking-tight">CONTATO</h2>
-                <p className="text-lg text-gray-600 max-w-2xl mx-auto">Vamos transformar sua ideia em uma experiência visual incrível</p>
+        <div className="w-full max-w-5xl mx-auto px-4 sm:px-6 py-8 sm:py-12 md:py-16">
+            <div className="text-center mb-8 sm:mb-12 md:mb-16">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-4 tracking-tight">CONTATO</h2>
+                <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">Vamos transformar sua ideia em uma experiência visual incrível</p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12">
-                <div className="lg:col-span-2 space-y-10 animate-slideInLeft">
-                    <div className="bg-black/5 backdrop-blur-sm p-8 rounded-2xl">
-                        <h3 className="text-2xl font-semibold text-black mb-8 border-b border-yellow pb-4">Minhas Informações</h3>
-                        <div className="space-y-6">
-                            <div className="flex items-center space-x-4 group">
-                                <div className="w-12 h-12 bg-yellow rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
-                                    <RiPhoneFill size={24} className="text-black" />
+            <div className="grid grid-cols-1 lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-12">
+                <div className="lg:col-span-2 space-y-6 sm:space-y-8 lg:space-y-10 animate-slideInLeft">
+                    <div className="bg-black/5 backdrop-blur-sm p-6 sm:p-8 rounded-2xl">
+                        <h3 className="text-xl sm:text-2xl font-semibold text-black mb-6 sm:mb-8 border-b border-yellow pb-4">Minhas Informações</h3>
+                        <div className="space-y-4 sm:space-y-6">
+                            <div className="flex items-center space-x-3 sm:space-x-4 group">
+                                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                                    <RiPhoneFill size={20} className="text-black sm:w-6 sm:h-6" />
                                 </div>
                                 <div>
-                                    <p className="text-sm text-black font-bold uppercase tracking-wider">Telefone</p>
-                                    <p className="text-black font-medium transition-colors">
+                                    <p className="text-xs sm:text-sm text-black font-bold uppercase tracking-wider">Telefone</p>
+                                    <p className="text-sm sm:text-base text-black font-medium transition-colors">
                                         <a href="tel:+5511982966568">+55 11 98296-6568</a>
                                     </p>
                                 </div>
                             </div>
 
-                            <div className="flex items-center space-x-4 group">
-                                <div className="w-12 h-12 bg-yellow rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
-                                    <RiMailFill size={24} className="text-black" />
+                            <div className="flex items-center space-x-3 sm:space-x-4 group">
+                                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                                    <RiMailFill size={20} className="text-black sm:w-6 sm:h-6" />
                                 </div>
                                 <div>
-                                    <p className="text-sm text-black font-bold uppercase tracking-wider">Email</p>
-                                    <p className="text-black font-medium transition-colors">
+                                    <p className="text-xs sm:text-sm text-black font-bold uppercase tracking-wider">Email</p>
+                                    <p className="text-sm sm:text-base text-black font-medium transition-colors break-all">
                                         <a href="mailto:nathansantos1201@gmail.com">nathansantos1201@gmail.com</a>
                                     </p>
                                 </div>
                             </div>
 
-                            <div className="flex items-center space-x-4 group">
-                                <div className="w-12 h-12 bg-yellow rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                            <div className="flex items-center space-x-3 sm:space-x-4 group">
+                                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-yellow rounded-xl flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
                                     <a
                                         href="https://www.instagram.com/_nah00/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="flex items-center justify-center"
                                     >
-                                        <RiInstagramFill size={24} className="text-black" />
+                                        <RiInstagramFill size={20} className="text-black sm:w-6 sm:h-6" />
                                     </a>
                                 </div>
                                 <div>
-                                    <p className="text-sm text-black font-bold uppercase tracking-wider">Instagram</p>
-                                    <p className="text-black font-medium transition-colors">
+                                    <p className="text-xs sm:text-sm text-black font-bold uppercase tracking-wider">Instagram</p>
+                                    <p className="text-sm sm:text-base text-black font-medium transition-colors">
                                         <a
                                             href="https://www.instagram.com/_nah00/"
                                             target="_blank"
@@ -152,42 +152,42 @@ export const ContactForm = () => {
                         </div>
                     </div>
 
-                    <div className="bg-black/5 backdrop-blur-sm p-8 rounded-2xl">
-                        <h3 className="text-2xl font-semibold text-black mb-8 border-b border-yellow pb-4">Serviços</h3>
-                        <ul className="space-y-4">
+                    <div className="bg-black/5 backdrop-blur-sm p-6 sm:p-8 rounded-2xl">
+                        <h3 className="text-xl sm:text-2xl font-semibold text-black mb-6 sm:mb-8 border-b border-yellow pb-4">Serviços</h3>
+                        <ul className="space-y-3 sm:space-y-4">
                             <li className="flex items-center space-x-3 group">
-                                <div className="w-10 h-10 bg-yellow/80 rounded-lg flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
-                                    <RiVideoFill size={20} className="text-black" />
+                                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-yellow/80 rounded-lg flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                                    <RiVideoFill size={18} className="text-black sm:w-5 sm:h-5" />
                                 </div>
-                                <span className="text-gray-800 font-medium">Cobertura de eventos</span>
+                                <span className="text-gray-800 font-medium text-sm sm:text-base">Cobertura de eventos</span>
                             </li>
                             <li className="flex items-center space-x-3 group">
-                                <div className="w-10 h-10 bg-yellow/80 rounded-lg flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
-                                    <RiShareFill size={20} className="text-black" />
+                                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-yellow/80 rounded-lg flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                                    <RiShareFill size={18} className="text-black sm:w-5 sm:h-5" />
                                 </div>
-                                <span className="text-gray-800 font-medium">Gestão de redes sociais</span>
+                                <span className="text-gray-800 font-medium text-sm sm:text-base">Gestão de redes sociais</span>
                             </li>
                             <li className="flex items-center space-x-3 group">
-                                <div className="w-10 h-10 bg-yellow/80 rounded-lg flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
-                                    <RiMovieFill size={20} className="text-black" />
+                                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-yellow/80 rounded-lg flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                                    <RiMovieFill size={18} className="text-black sm:w-5 sm:h-5" />
                                 </div>
-                                <span className="text-gray-800 font-medium">Videomaker mobile</span>
+                                <span className="text-gray-800 font-medium text-sm sm:text-base">Videomaker mobile</span>
                             </li>
                             <li className="flex items-center space-x-3 group">
-                                <div className="w-10 h-10 bg-yellow/80 rounded-lg flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
-                                    <RiLightbulbFill size={20} className="text-black" />
+                                <div className="w-8 h-8 sm:w-10 sm:h-10 bg-yellow/80 rounded-lg flex items-center justify-center shadow-md group-hover:scale-110 transition-transform duration-300">
+                                    <RiLightbulbFill size={18} className="text-black sm:w-5 sm:h-5" />
                                 </div>
-                                <span className="text-gray-800 font-medium">Direção criativa</span>
+                                <span className="text-gray-800 font-medium text-sm sm:text-base">Direção criativa</span>
                             </li>
                         </ul>
                     </div>
                 </div>
 
-                <div className="lg:col-span-3 bg-white rounded-2xl p-8 md:p-10 border border-gray-200 shadow-lg relative overflow-hidden animate-slideInRight">
+                <div className="lg:col-span-3 bg-white rounded-2xl p-6 sm:p-8 md:p-10 border border-gray-200 shadow-lg relative overflow-hidden animate-slideInRight">
                     <div className="relative z-10">
-                        <h3 className="text-2xl font-semibold text-center text-black mb-8 animate-fadeIn">Vamos trabalhar juntos</h3>
+                        <h3 className="text-xl sm:text-2xl font-semibold text-center text-black mb-6 sm:mb-8 animate-fadeIn">Vamos trabalhar juntos</h3>
 
-                        <form className="space-y-6 animate-fadeIn" style={{ animationDelay: "0.2s" }} onSubmit={handleSubmit}>
+                        <form className="space-y-4 sm:space-y-6 animate-fadeIn" style={{ animationDelay: "0.2s" }} onSubmit={handleSubmit}>
                             <div>
                                 <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                                     Nome completo
@@ -199,12 +199,12 @@ export const ContactForm = () => {
                                     value={formData.name}
                                     onChange={handleInputChange}
                                     required
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none"
+                                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg outline-none text-sm sm:text-base"
                                     placeholder="Seu nome"
                                 />
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                                 <div>
                                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                                         Email
@@ -216,7 +216,7 @@ export const ContactForm = () => {
                                         value={formData.email}
                                         onChange={handleInputChange}
                                         required
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none"
+                                        className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg outline-none text-sm sm:text-base"
                                         placeholder="seu@email.com"
                                     />
                                 </div>
@@ -231,7 +231,7 @@ export const ContactForm = () => {
                                         name="phone"
                                         value={formData.phone}
                                         onChange={handleInputChange}
-                                        className="w-full px-4 py-3 border border-gray-300 rounded-lg outline-none"
+                                        className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg outline-none text-sm sm:text-base"
                                         placeholder="(11) 99999-9999"
                                     />
                                 </div>
@@ -247,8 +247,8 @@ export const ContactForm = () => {
                                     value={formData.projectDescription}
                                     onChange={handleInputChange}
                                     required
-                                    rows={5}
-                                    className="w-full px-4 py-3 border border-gray-300 rounded-lg resize-none outline-none"
+                                    rows={4}
+                                    className="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg resize-none outline-none text-sm sm:text-base sm:rows-5"
                                     placeholder="Conte-me sobre seu projeto, objetivos e como posso te ajudar..."
                                 />
                             </div>
@@ -268,7 +268,7 @@ export const ContactForm = () => {
                             <button
                                 type="submit"
                                 disabled={formStatus.isLoading}
-                                className={`w-full py-4 px-6 rounded-lg font-semibold text-lg transition-all duration-300 flex items-center justify-center space-x-3 ${
+                                className={`w-full py-3 sm:py-4 px-4 sm:px-6 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 flex items-center justify-center space-x-2 sm:space-x-3 ${
                                     formStatus.isLoading
                                         ? 'bg-gray-400 cursor-not-allowed'
                                         : 'bg-yellow hover:bg-yellow/90 hover:scale-[1.02] active:scale-[0.98]'
@@ -276,12 +276,12 @@ export const ContactForm = () => {
                             >
                                 {formStatus.isLoading ? (
                                     <>
-                                        <div className="w-5 h-5 border-2 border-black border-t-transparent rounded-full animate-spin"></div>
+                                        <div className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-black border-t-transparent rounded-full animate-spin"></div>
                                         <span>Enviando...</span>
                                     </>
                                 ) : (
                                     <>
-                                        <RiSendPlaneFill size={20} />
+                                        <RiSendPlaneFill size={18} className="sm:w-5 sm:h-5" />
                                         <span className='cursor-pointer'>Enviar Mensagem</span>
                                     </>
                                 )}

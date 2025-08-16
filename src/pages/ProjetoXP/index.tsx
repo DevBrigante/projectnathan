@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router'
 import { useEffect } from 'react'
+import { Footer } from '../../components/Footer'
 import XPLogo from '../../assets/XpLogo.png'
 import BetNacionalLogo from '../../assets/betNacionalLogo.png'
 import CimedLogo from '../../assets/cimedLogo.png'
@@ -26,7 +27,7 @@ export function ProjectXP() {
     };
 
     return (
-        <div className="h-screen w-full max-w-full bg-zinc-900 text-white flex flex-col">
+        <div className="h-full w-full max-w-full bg-zinc-900 text-white flex flex-col">
             <div className="absolute top-6 left-6 z-10">
                 <button
                     onClick={handleBackToHome}
@@ -51,40 +52,40 @@ export function ProjectXP() {
                     </span>
                 </button>
             </div>
-            <div className="max-w-6xl mx-30 mt-34 flex flex-row">
-                <h1 className="text-white text-4xl font-bold">JOGOS PAN AMERICANOS 2023</h1>
-                <p className="text-white text-xl text-balance pl-5">+5 milhões de contas alcançadas e +20 mil de seguidores durante a copa feminina de 2023</p>
+            <div className="max-w-6xl mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-20 sm:mt-28 md:mt-34 flex flex-col sm:flex-row">
+                <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-0">JOGOS PAN AMERICANOS 2023</h1>
+                <p className="text-white text-base sm:text-lg md:text-xl text-balance sm:pl-5">+5 milhões de contas alcançadas e +20 mil de seguidores durante a copa feminina de 2023</p>
             </div>
-            <div className="max-w-[20%] mx-30 mt-6 flex flex-col">
-                <p className="text-balance text-sm">Atuação como Social Media, Coordenador de entregas publicitárias, Filmmaker e Fotográfo</p>
+            <div className="max-w-full sm:max-w-[80%] md:max-w-[60%] lg:max-w-[20%] mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-4 sm:mt-6 flex flex-col">
+                <p className="text-balance text-xs sm:text-sm">Atuação como Social Media, Coordenador de entregas publicitárias, Filmmaker e Fotográfo</p>
             </div>
-            <div className="max-w-[80%] mt-15 flex flex-col mx-30">
-                <h2 className="text-xl">CLIENTES</h2>
-                <div className="flex flex-row mt-5 gap-5">
+            <div className="max-w-full mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-8 sm:mt-12 md:mt-15 flex flex-col">
+                <h2 className="text-lg sm:text-xl">CLIENTES</h2>
+                <div className="flex flex-wrap sm:flex-row mt-3 sm:mt-5 gap-3 sm:gap-5">
                     <img
                         src={BetNacionalLogo}
                         alt="BetNacional Logo"
-                        className="max-w-full max-h-10 sm:max-h-16 lg:max-h-10 object-contain hover:scale-120 transition-transform duration-300"
+                        className="max-w-full max-h-8 sm:max-h-10 md:max-h-12 lg:max-h-10 object-contain hover:scale-110 transition-transform duration-300"
                     />
                     <img
                         src={CimedLogo}
                         alt="Cimed Logo"
-                        className="max-w-full max-h-12 sm:max-h-16 lg:max-h-10 object-contain hover:scale-120 transition-transform duration-300"
+                        className="max-w-full max-h-8 sm:max-h-10 md:max-h-12 lg:max-h-10 object-contain hover:scale-110 transition-transform duration-300"
                     />
                     <img
                         src={XPLogo}
                         alt="Xp Logo"
-                        className="max-w-full max-h-12 sm:max-h-16 lg:max-h-10 object-contain hover:scale-120 transition-transform duration-300"
+                        className="max-w-full max-h-8 sm:max-h-10 md:max-h-12 lg:max-h-10 object-contain hover:scale-110 transition-transform duration-300"
                     />
                     <img
                         src={HavaianasLogo}
                         alt="Havaianas Logo"
-                        className="max-w-full max-h-12 sm:max-h-16 lg:max-h-10 object-contain hover:scale-120 transition-transform duration-300"
+                        className="max-w-full max-h-8 sm:max-h-10 md:max-h-12 lg:max-h-10 object-contain hover:scale-110 transition-transform duration-300"
                     />
                 </div>
             </div>
-            <div className="max-w-full mx-30 mt-12 sm:mt-16 lg:mt-20 flex flex-col mb-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            <div className="max-w-full mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-8 sm:mt-12 md:mt-16 lg:mt-20 flex flex-col mb-8 sm:mb-12 md:mb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
                     {/* Image 1 */}
                     <div className="group overflow-hidden rounded-lg bg-zinc-800 aspect-video hover:scale-105 transition-transform duration-300">
                         <img
@@ -140,6 +141,8 @@ export function ProjectXP() {
                     </div>
                 </div>
             </div>
+            
+            <Footer />
         </div>
     )
 }

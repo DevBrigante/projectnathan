@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router";
 import { useEffect } from 'react'
+import { Footer } from '../../components/Footer'
 import GuaranaLogo from '../../assets/guaranaLogo.png'
 import BetNacionalLogo from '../../assets/betNacionalLogo.png'
 import CimedLogo from '../../assets/cimedLogo.png'
@@ -31,15 +32,15 @@ export function CopaProject() {
     };
 
     return (
-        <div className="h-screen w-full max-w-full bg-zinc-900 text-white flex flex-col">
-            <div className="absolute top-6 left-6 z-10">
+        <div className="h-full w-full max-w-full bg-zinc-900 text-white flex flex-col">
+            <div className="absolute top-4 left-4 sm:top-6 sm:left-6 z-10">
                 <button
                     onClick={handleBackToHome}
-                    className="group flex items-center gap-3 px-4 py-2 bg-zinc-800/80 backdrop-blur-sm border border-zinc-700/50 rounded-full text-white hover:bg-zinc-700/80 hover:border-zinc-600/50 transition-all duration-300 ease-out hover:scale-105 active:scale-95 cursor-pointer"
+                    className="group flex items-center gap-2 sm:gap-3 px-3 py-2 sm:px-4 bg-zinc-800/80 backdrop-blur-sm border border-zinc-700/50 rounded-full text-white hover:bg-zinc-700/80 hover:border-zinc-600/50 transition-all duration-300 ease-out hover:scale-105 active:scale-95 cursor-pointer"
                     aria-label="Voltar para a página inicial do projeto"
                 >
                     <svg
-                        className="w-5 h-5 transition-transform duration-300 group-hover:-translate-x-1 cursor-pointer"
+                        className="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:-translate-x-1 cursor-pointer"
                         fill="none"
                         stroke="currentColor"
                         viewBox="0 0 24 24"
@@ -51,60 +52,60 @@ export function CopaProject() {
                             d="M10 19l-7-7m0 0l7-7m-7 7h18"
                         />
                     </svg>
-                    <span className="text-sm cursor-pointer font-medium hidden sm:block transition-opacity duration-300">
+                    <span className="text-xs sm:text-sm cursor-pointer font-medium hidden sm:block transition-opacity duration-300">
                         Clique para voltar a tela principal
                     </span>
                 </button>
             </div>
-            <div className="max-w-6xl mx-30 mt-34 flex flex-row">
-                <h1 className="text-white text-4xl font-bold">COPA DO MUNDO DE 2022</h1>
-                <p className="text-white text-xl text-balance pl-5">+50 milhões de contas alcançadas e +300 mil de seguidores durante a copa do mundo de 2022</p>
+            <div className="max-w-6xl mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-20 sm:mt-28 md:mt-34 flex flex-col sm:flex-row">
+                <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-0">COPA DO MUNDO DE 2022</h1>
+                <p className="text-white text-base sm:text-lg md:text-xl text-balance sm:pl-5">+50 milhões de contas alcançadas e +300 mil de seguidores durante a copa do mundo de 2022</p>
             </div>
-            <div className="max-w-[20%] mx-30 mt-6 flex flex-col">
-                <p className="text-balance text-sm">Atuação como Social Media e Coordenador de entregas publicitárias</p>
+            <div className="max-w-full sm:max-w-[80%] md:max-w-[60%] lg:max-w-[20%] mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-4 sm:mt-6 flex flex-col">
+                <p className="text-balance text-xs sm:text-sm">Atuação como Social Media e Coordenador de entregas publicitárias</p>
             </div>
-            <div className="max-w-[80%] mt-15 flex flex-col mx-30">
-                <h2 className="text-xl">CLIENTES</h2>
-                <div className="flex flex-row mt-5 gap-5">
+            <div className="max-w-full mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-8 sm:mt-12 md:mt-15 flex flex-col">
+                <h2 className="text-lg sm:text-xl">CLIENTES</h2>
+                <div className="flex flex-wrap sm:flex-row mt-3 sm:mt-5 gap-3 sm:gap-5">
                     <img
                         src={BetNacionalLogo}
                         alt="BetNacional Logo"
-                        className="max-w-full max-h-10 sm:max-h-16 lg:max-h-10 object-contain hover:scale-120 transition-transform duration-300"
+                        className="max-w-full max-h-8 sm:max-h-10 md:max-h-12 lg:max-h-10 object-contain hover:scale-110 transition-transform duration-300"
                     />
                     <img
                         src={CimedLogo}
                         alt="Cimed Logo"
-                        className="max-w-full max-h-12 sm:max-h-16 lg:max-h-10 object-contain hover:scale-120 transition-transform duration-300"
+                        className="max-w-full max-h-8 sm:max-h-10 md:max-h-12 lg:max-h-10 object-contain hover:scale-110 transition-transform duration-300"
                     />
                     <img
                         src={GuaranaLogo}
                         alt="Guaraná Logo"
-                        className="max-w-full max-h-12 sm:max-h-16 lg:max-h-10 object-contain hover:scale-120 transition-transform duration-300"
+                        className="max-w-full max-h-8 sm:max-h-10 md:max-h-12 lg:max-h-10 object-contain hover:scale-110 transition-transform duration-300"
                     />
                     <img
                         src={BrahmaLogo}
                         alt="Brahma Logo"
-                        className="max-w-full max-h-12 sm:max-h-16 lg:max-h-10 object-contain hover:scale-120 transition-transform duration-300"
+                        className="max-w-full max-h-8 sm:max-h-10 md:max-h-12 lg:max-h-10 object-contain hover:scale-110 transition-transform duration-300"
                     />
                     <img
                         src={ItauLogo}
                         alt="Itau Logo"
-                        className="max-w-full max-h-12 sm:max-h-16 lg:max-h-10 object-contain hover:scale-120 transition-transform duration-300"
+                        className="max-w-full max-h-8 sm:max-h-10 md:max-h-12 lg:max-h-10 object-contain hover:scale-110 transition-transform duration-300"
                     />
                     <img
                         src={MastercardLogo}
                         alt="Mastercard Logo"
-                        className="max-w-full max-h-12 sm:max-h-16 lg:max-h-10 object-contain hover:scale-120 transition-transform duration-300"
+                        className="max-w-full max-h-8 sm:max-h-10 md:max-h-12 lg:max-h-10 object-contain hover:scale-110 transition-transform duration-300"
                     />
                     <img
                         src={VisaLogo}
                         alt="Visa Logo"
-                        className="max-w-full max-h-12 sm:max-h-16 lg:max-h-10 object-contain hover:scale-120 transition-transform duration-300"
+                        className="max-w-full max-h-8 sm:max-h-10 md:max-h-12 lg:max-h-10 object-contain hover:scale-110 transition-transform duration-300"
                     />
                 </div>
             </div>
-            <div className="max-w-full mx-30 mt-12 sm:mt-16 lg:mt-20 flex flex-col mb-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            <div className="max-w-full mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-8 sm:mt-12 md:mt-16 lg:mt-20 flex flex-col mb-8 sm:mb-12 md:mb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
                     <div className="group overflow-hidden rounded-lg bg-zinc-800 aspect-video hover:scale-105 transition-transform duration-300 md:col-span-2 lg:col-span-1">
                         <video
                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
@@ -179,6 +180,8 @@ export function CopaProject() {
                     </div>
                 </div>
             </div>
+            
+            <Footer />
         </div>
     )
 }

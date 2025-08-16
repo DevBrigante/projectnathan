@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router";
 import { useEffect } from 'react'
+import { Footer } from '../../components/Footer'
 import MellowVideo1 from '../../assets/MellowVideos/08.10.mp4'
 import MellowVideo2 from '../../assets/MellowVideos/Vídeo-Extra1.mp4'
 import MellowVideo3 from '../../assets/MellowVideos/copy-2d3392c5-33cd-4346-8cf9-edd5af855521_GAhIZAlw.mp4'
@@ -25,7 +26,7 @@ export function MellowProject() {
     };
 
     return (
-        <div className="h-screen w-full max-w-full bg-zinc-900 text-white flex flex-col">
+        <div className="h-full w-full max-w-full bg-zinc-900 text-white flex flex-col">
             <div className="absolute top-6 left-6 z-10">
                 <button
                     onClick={handleBackToHome}
@@ -50,14 +51,12 @@ export function MellowProject() {
                     </span>
                 </button>
             </div>
-            <div className="max-w-6xl mx-30 mt-34 flex flex-row">
-                <h1 className="text-white text-4xl font-bold">MELLOW</h1>
+            <div className="max-w-6xl mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-20 sm:mt-28 md:mt-34 flex flex-col">
+                <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold">MELLOW</h1>
+                <p className="mt-4 sm:mt-6 text-balance text-xs sm:text-sm max-w-full sm:max-w-[80%] md:max-w-[60%] lg:max-w-[20%]">Atuação como Social Media, Produção de Conteúdo e Cobertura mobile real time</p>
             </div>
-            <div className="max-w-[20%] mx-30 mt-6 flex flex-col">
-                <p className="text-balance text-sm">Atuação como Social Media, Produção de Conteúdo e Cobertura mobile real time</p>
-            </div>
-            <div className="max-w-full mx-30 mt-12 sm:mt-16 lg:mt-10 flex flex-col mb-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            <div className="max-w-full mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-8 sm:mt-12 md:mt-16 lg:mt-10 flex flex-col mb-8 sm:mb-12 md:mb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
                     <div className="group overflow-hidden rounded-lg bg-zinc-800 aspect-video hover:scale-105 transition-transform duration-300 md:col-span-2 lg:col-span-1">
                         <video
                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
@@ -204,6 +203,8 @@ export function MellowProject() {
                     </div>
                 </div>
             </div>
+            
+            <Footer />
         </div>
     )
 }

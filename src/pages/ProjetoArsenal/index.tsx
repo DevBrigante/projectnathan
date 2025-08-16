@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router'
 import { useEffect } from 'react'
+import { Footer } from '../../components/Footer'
 import ImageProjetoArsenal from '../../assets/ProjetosPessoais/Projeto Arsenal_ o Clube de todos - Produção e Modelo Grupal.jpg'
 import ImageProjetoArsenal2 from '../../assets/ProjetosPessoais/Projeto Arsenal_ o Clube de todos - Produção e Modelo.jpg'
 import ProjetoArsenalVideo from '../../assets/ProjetosPessoais/projeto-arsenal-o-clube-de-todos-producao-direcao-criativa-captacao_.mp4'
@@ -55,20 +56,18 @@ export function ArsenalProject() {
                     </span>
                 </button>
             </div>
-            <div className="max-w-6xl mx-30 mt-34 flex flex-col">
-                <h1 className="text-white text-4xl font-bold">PROJETOS PESSOAIS</h1>
-                <p className="mt-2 text-white text-xl w-[80%] text-balanc">Aqui um espaço onde crio além da demanda, crio por inspiração e amor a arte.</p>
+            <div className="max-w-6xl mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-20 sm:mt-28 md:mt-34 flex flex-col">
+                <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold">PROJETOS PESSOAIS</h1>
+                <p className="mt-2 text-white text-base sm:text-lg md:text-xl w-full sm:w-[90%] md:w-[80%] text-balance">Aqui um espaço onde crio além da demanda, crio por inspiração e amor a arte.</p>
             </div>
-             <div className="max-w-6xl mx-30 mt-20 flex flex-row">
-                <h2 className="text-white text-4xl font-bold">Projeto Arsenal - O clube de todos</h2>
-            </div>
-            <div className="mx-30 mt-3 flex flex-col">
-                <p className="text-base">Produção, Direção Criativa, Captação e Edição</p>
+             <div className="max-w-6xl mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-12 sm:mt-16 md:mt-20 flex flex-col">
+                <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">Projeto Arsenal - O clube de todos</h2>
+                <p className="mt-2 sm:mt-3 text-sm sm:text-base">Produção, Direção Criativa, Captação e Edição</p>
             </div>
 
             {/* Parte onde começa as fotos */}
-            <div className="max-w-full mx-30 mt-12 sm:mt-16 lg:mt-8 flex flex-col mb-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            <div className="max-w-full mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-6 sm:mt-8 flex flex-col mb-8 sm:mb-12 md:mb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
                     <div className="group overflow-hidden rounded-lg bg-zinc-800 aspect-video hover:scale-105 transition-transform duration-300">
                         <img
                             src={ImageProjetoArsenal}
@@ -124,15 +123,13 @@ export function ArsenalProject() {
             </div>
             {/* Parte onde termina as fotos */}
 
-            <div className="max-w-6xl mx-30 mt-12 flex flex-row">
-                <h2 className="text-white text-4xl font-bold">Projeto do Mar, Marseille</h2>
-            </div>
-            <div className="mx-30 mt-3 flex flex-col">
-                <p className=" text-base">Produção, Assistente de direção e Modelagem</p>
+            <div className="max-w-6xl mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-8 sm:mt-10 md:mt-12 flex flex-col">
+                <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">Projeto do Mar - Marseille</h2>
+                <p className="mt-2 sm:mt-3 text-sm sm:text-base">Produção, Assistente de direção e Modelagem</p>
             </div>
             {/* Parte onde começa as fotos */}
-            <div className="max-w-full mx-30 mt-12 sm:mt-16 lg:mt-8 flex flex-col mb-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            <div className="max-w-full mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-6 sm:mt-8 flex flex-col mb-8 sm:mb-12 md:mb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
                     <div className="group overflow-hidden rounded-lg bg-zinc-800 aspect-video hover:scale-105 transition-transform duration-300">
                         <img
                             src={ImageProjetoMar}
@@ -176,14 +173,12 @@ export function ArsenalProject() {
                 </div>
             </div>
             {/* Parte onde termina as fotos */}
-            <div className="max-w-6xl mx-30 mt-12 flex flex-row">
-                <h2 className="text-white text-4xl font-bold">Projeto vivências do Futebol</h2>
+            <div className="max-w-6xl mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-8 sm:mt-10 md:mt-12 flex flex-col">
+                <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold">Projeto vivências do Futebol</h2>
+                <p className="mt-2 sm:mt-3 text-sm sm:text-base">Direção Criativa, Captação e Edição</p>
             </div>
-            <div className="mx-30 mt-3 flex flex-col">
-                <p className="text-base">Direção Criativa, Captação e Edição</p>
-            </div>
-            <div className="max-w-full mx-30 mt-12 sm:mt-16 lg:mt-8 flex flex-col mb-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            <div className="max-w-full mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-6 sm:mt-8 flex flex-col mb-8 sm:mb-12 md:mb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
                     <div className="group overflow-hidden rounded-lg bg-zinc-800 aspect-video hover:scale-105 transition-transform duration-300 md:col-span-2 lg:col-span-1">
                         <video
                             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
@@ -259,7 +254,8 @@ export function ArsenalProject() {
                 </div>
 
             </div>
-
+            
+            <Footer />
         </div>
     )
 }

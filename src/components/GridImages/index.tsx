@@ -27,11 +27,11 @@ const gridItems: GridItem[] = [
 export function GridImages() {
     return (
         <section className="w-full flex justify-center mt-[30px] overflow-x-hidden">
-            <div className="grid w-full max-w-8xl gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-2 overflow-hidden">
+            <div className="grid w-full max-w-8xl gap-3 sm:gap-4 md:gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 px-4 sm:px-6 md:px-8 lg:px-2 overflow-hidden">
                 {gridItems.map((item) => (
                     <div key={item.id} className="grid-item">
                         <Link to={item.link} className="block group rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-105 opacity-70 hover:opacity-100 bg-black/80">
-                            <div className="relative w-full h-70 overflow-hidden rounded-lg bg-black">
+                            <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-70 overflow-hidden rounded-lg bg-black">
                                 {item.type === 'video' ? (
                                     <video
                                         src={item.src}

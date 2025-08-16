@@ -94,10 +94,10 @@ export const CoberturaRealTime = () => {
         visible: { opacity: 1, y: 0, transition: { duration: 0.5 } }
     };
     return (
-        <div className="mx-30 mt-40 mb-10 text-white coberturas-section">
-            <h2 className="text-6xl font-semibold">COBERTURAS REAL TIME</h2>
+        <div className="mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-20 sm:mt-30 md:mt-40 mb-6 sm:mb-8 md:mb-10 text-white coberturas-section">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold">COBERTURAS REAL TIME</h2>
             <motion.div
-                className="mt-10 grid mx-auto w-full gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-2 px-2 overflow-hidden"
+                className="mt-6 sm:mt-8 md:mt-10 grid mx-auto w-full gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2 px-2 overflow-hidden"
                 variants={containerVariants}
                 initial="hidden"
                 animate="visible"
@@ -109,9 +109,9 @@ export const CoberturaRealTime = () => {
                         variants={itemVariants}
                         whileHover={{ scale: 1.03, transition: { duration: 0.3 } }}
                     >
-                        <div className="mb-3 mt-6 text-center text-[25px] tracking-widest">
+                        <div className="mb-2 sm:mb-3 mt-4 sm:mt-6 text-center text-lg sm:text-xl md:text-[25px] tracking-widest">
                             <p>{item.title}</p>
-                            <p className="text-[18px] text-gray-300">{item.client}</p>
+                            <p className="text-sm sm:text-base md:text-[18px] text-gray-300">{item.client}</p>
                         </div>
                         <div className="w-130 h-150 mb-10 aspect-square rounded-lg overflow-hidden flex items-center justify-center bg-black shadow-lg">
                             <video
