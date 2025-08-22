@@ -21,11 +21,11 @@ export function Home() {
                     <p className="font-bold text-5xl sm:text-6xl md:text-7xl lg:text-7xl">Nathan de Assis</p>
                 </div>
                 <div className="w-full flex justify-center px-4">
-                    <ul className="flex flex-wrap justify-center gap-5 sm:gap-6 md:gap-8 lg:gap-15 p-2 list-disc text-xs sm:text-base md:text-lg lg:text-xl font-semibold">
-                        <li>Jornalista</li>
-                        <li>Social Media</li>
-                        <li>Videomaker Mobile</li>
-                        <li>Diretor Criativo</li>
+                    <ul className="flex flex-wrap justify-center gap-5 sm:gap-6 md:gap-8 lg:gap-15 p-2 text-xs sm:text-base md:text-lg lg:text-xl font-semibold">
+                        <li className="flex items-center before:content-['•'] before:mr-1">Jornalista</li>
+                        <li className="flex items-center before:content-['•'] before:mr-1">Social Media</li>
+                        <li className="flex items-center before:content-['•'] before:mr-1">Videomaker Mobile</li>
+                        <li className="flex items-center before:content-['•'] before:mr-1">Diretor Criativo</li>
                     </ul>
                 </div>
                 <div className="mt-5 mb-5 px-4">
