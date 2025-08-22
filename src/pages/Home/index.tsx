@@ -22,7 +22,7 @@ export function Home() {
                 </div>
                 <div className="w-full flex justify-center px-4">
                     <ul className="flex flex-wrap justify-center gap-5 sm:gap-6 md:gap-8 lg:gap-15 p-2 list-disc text-xs sm:text-base md:text-lg lg:text-xl font-semibold">
-                        Jornalista
+                        <li>Jornalista</li>
                         <li>Social Media</li>
                         <li>Videomaker Mobile</li>
                         <li>Diretor Criativo</li>
