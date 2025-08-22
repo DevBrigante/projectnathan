@@ -34,8 +34,8 @@ export const ScrollToTop = () => {
     };
 
     const buttonClasses = `
-        fixed bottom-8 left-8 
-        w-14 h-14 
+        fixed bottom-8 left-1 
+        w-8 h-8 
         bg-gradient-to-br from-yellow to-amber-400 
         hover:from-amber-400 hover:to-yellow 
         border-0 rounded-full 
@@ -66,7 +66,7 @@ export const ScrollToTop = () => {
                         className={`w-5 h-5 md:w-6 md:h-6 transition-transform duration-200 ease-in-out ${isHovered ? '-translate-y-0.5' : ''}`}
                         width="24"
                         height="24"
-                        viewBox="0 0 24 24"
+                        viewBox="0 0 24 20"
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                     >
