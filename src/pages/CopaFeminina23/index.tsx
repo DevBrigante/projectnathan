@@ -51,8 +51,8 @@ export function CopaFeminina() {
                 </button>
             </div>
             <div className="max-w-6xl mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-20 sm:mt-28 md:mt-34 flex flex-col sm:flex-row">
-                <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-0">COPA DO MUNDO FEMININA 2023</h1>
-                <p className="text-white text-base sm:text-lg md:text-xl text-balance sm:pl-5">+10 milhões de contas alcançadas e +50 mil de seguidores durante a copa do mundo feminina de 2023</p>
+                <h1 className="text-white text-[22px] sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-0">COPA DO MUNDO FEMININA 2023</h1>
+                <p className="text-white text-base sm:text-lg md:text-xl sm:pl-5">+10 milhões de contas alcançadas e +50 mil de seguidores durante a copa do mundo feminina de 2023</p>
             </div>
             <div className="max-w-full sm:max-w-[80%] md:max-w-[60%] lg:max-w-[20%] mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-4 sm:mt-6 flex flex-col">
                 <p className="text-balance text-xs sm:text-sm">Atuação como Social Media e Coordenador de entregas publicitárias</p>

@@ -51,20 +51,18 @@ const navigate = useNavigate();
                     </span>
                 </button>
             </div>
-            <div className="max-w-6xl mx-30 mt-34 flex flex-col">
-                <h1 className="text-white text-4xl font-bold">BLOKE BAILE</h1>
-                <p className="mt-2 text-white text-xl w-[80%] text-balanc">O Bloke Baile é o primeiro baile de camisas de time do Brasil. Criado para celebrar a cultura Blokecore.</p>
-                <p className="mt-4">- Direção Criativa do contéudo editorial</p>
-                <p>- Coordenação de Redes Sociais do evento</p>
-                <p>- Responsável pelo fechamento de parceriascom Influencers para divulgação do evento</p>
+            <div className="max-w-6xl mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-20 sm:mt-28 md:mt-34 flex flex-col">
+                <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-bold">BLOKE BAILE</h1>
+                <p className="mt-2 text-white text-base sm:text-lg md:text-xl w-full sm:w-[90%] md:w-[80%] text-balance">O Bloke Baile é o primeiro baile de camisas de time do Brasil. Criado para celebrar a cultura Blokecore.</p>
+                <p className="text-white text-base sm:text-lg md:text-xl sm:pl-5 mt-3">+ 70 mil contas alcançadas em 30 dias de criação no Instagram do evento</p>
+                <p className="text-white text-base sm:text-lg md:text-xl sm:pl-5">+ 400 pessoas confirmadas via Sympla</p>
+                <p className="text-white text-base sm:text-lg md:text-xl sm:pl-5">+ 5 parceirias fechadas com Influencers</p>
+                <p className='mt-4 text-sm sm:text-base'>- Direção Criativa do contéudo editorial</p>
+                <p className="text-sm sm:text-base">- Coordenação de Redes Sociais do evento</p>
+                <p className="text-sm sm:text-base">- Responsável pelo fechamento de parceriascom Influencers para divulgação do evento</p>
             </div>
-            <div className="max-w-[20%] mx-30 mt-6 flex flex-col">
-                <p className="text-balance text-sm">+ 70 mil contas alcançadas em 30 dias de criação no Instagram do evento</p>
-                <p className="text-balance text-sm mt-3">+ 400 pessoas confirmadas via Sympla</p>
-                <p className="text-balance text-sm mt-3">+ 5 parceirias fechadas com Influencers</p>
-            </div>
-            <div className="max-w-full mx-30 mt-12 sm:mt-16 lg:mt-10 flex flex-col mb-16">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            <div className="max-w-full mx-4 sm:mx-8 md:mx-16 lg:mx-30 mt-8 sm:mt-12 md:mt-16 flex flex-col mb-8 sm:mb-12 md:mb-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
                     <div className="group overflow-hidden rounded-lg bg-zinc-800 aspect-video hover:scale-105 transition-transform duration-300">
                         <img
                             src={BlokeBaileImage}
