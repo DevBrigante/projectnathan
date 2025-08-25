@@ -26,7 +26,7 @@ export function Footer() {
                                 rel="noopener noreferrer"
                                 className="text-white font-semibold hover:text-yellow transition-colors duration-300"
                             >
-                                Gabriela Souza
+                                Gabriela Di Folco
                             </a>
                         </div>
                     </div>
