@@ -1,11 +1,11 @@
 import { useNavigate } from "react-router";
 import { useEffect } from 'react'
 import { Footer } from '../../components/Footer'
-import CopaFeminina23 from '../../assets/fotoCopa.jpg'
-import CopaFemininaVideo from '../../assets/GuaranaAntartica.mp4'
-import GuaranaLogo from '../../assets/guaranaLogo.png'
-import BetNacionalLogo from '../../assets/betNacionalLogo.png'
-import CimedLogo from '../../assets/cimedLogo.png'
+import CopaFeminina23 from '../../assets/images/fotoCopa.jpg'
+import CopaFemininaVideo from '../../assets/videos/GuaranaAntartica.mp4'
+import GuaranaLogo from '../../assets/logos/guaranaLogo.png'
+import BetNacionalLogo from '../../assets/logos/betNacionalLogo.png'
+import CimedLogo from '../../assets/logos/cimedLogo.png'
 
 export function CopaFeminina() {
     const navigate = useNavigate();

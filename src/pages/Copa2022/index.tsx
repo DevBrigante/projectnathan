@@ -1,17 +1,16 @@
 import { useNavigate } from "react-router";
 import { useEffect } from 'react'
 import { Footer } from '../../components/Footer'
-import GuaranaLogo from '../../assets/guaranaLogo.png'
-import BetNacionalLogo from '../../assets/betNacionalLogo.png'
-import CimedLogo from '../../assets/cimedLogo.png'
-import BrahmaLogo from '../../assets/brahmaLogo.png'
-import ItauLogo from '../../assets/itauLogo.png'
-import MastercardLogo from '../../assets/mastercardLogo.png'
-import VisaLogo from '../../assets/visaLogo.png'
-import Copa22Video from '../../assets/videoCopa.mp4'
-import AcaoCimedVideo from '../../assets/coordenacao-da-acao-capitao-cimed-mva-na-copa-do-mundo-de-2022_d32LoGEO.mp4'
-import AcaoCimedCaptacaoVideo from '../../assets/coordenacao-e-captacao-da-festa-de-despedida-do-mva-para-a-copa-do-mundo-de_1LcGJUyK.mp4'
-
+import GuaranaLogo from '../../assets/logos/guaranaLogo.png'
+import BetNacionalLogo from '../../assets/logos/betNacionalLogo.png'
+import CimedLogo from '../../assets/logos/cimedLogo.png'
+import BrahmaLogo from '../../assets/logos/brahmaLogo.png'
+import ItauLogo from '../../assets/logos/itauLogo.png'
+import MastercardLogo from '../../assets/logos/mastercardLogo.png'
+import VisaLogo from '../../assets/logos/visaLogo.png'
+import Copa22Video from '../../assets/videos/videoCopa.mp4'
+import AcaoCimedVideo from '../../assets/videos/coordenacao-da-acao-capitao-cimed-mva-na-copa-do-mundo-de-2022_d32LoGEO.mp4'
+import AcaoCimedCaptacaoVideo from '../../assets/videos/coordenacao-e-captacao-da-festa-de-despedida-do-mva-para-a-copa-do-mundo-de_1LcGJUyK.mp4'
 
 
 export function CopaProject() {

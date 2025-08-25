@@ -1,11 +1,11 @@
 import { Link } from "react-router";
 
-import imageXP from "../../assets/XP.jpg";
-import imageArsenal from "../../assets/projetoArsenal.jpg";
-import imageBloke from "../../assets/projetoBloke.jpg";
-import acaoVideo from "../../assets/GuaranaAntartica.mp4";
-import guaranaVideo from "../../assets/videoCopa.mp4";
-import imageMellow from "../../assets/fotoMellow.jpg";
+import imageXP from "../../assets/images/XP.jpg";
+import imageArsenal from "../../assets/images/projetoArsenal.jpg";
+import imageBloke from "../../assets/images/projetoBloke.jpg";
+import acaoVideo from "../../assets/videos/GuaranaAntartica.mp4";
+import guaranaVideo from "../../assets/videos/videoCopa.mp4";
+import imageMellow from "../../assets/images/fotoMellow.jpg";
 
 type GridItem = {
     id: string;

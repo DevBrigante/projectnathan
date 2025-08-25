@@ -1,12 +1,12 @@
 import { useNavigate } from 'react-router'
 import { useEffect } from 'react'
 import { Footer } from '../../components/Footer'
-import BlokeBaileVideo1 from '../../assets/BlokeBaile/BlokeVideo1.mp4'
-import BlokeBaileImage from '../../assets/projetoBloke.jpg'
-import BlokeBaileImage2 from '../../assets/BlokeBaile/BlokeFoto1.jpg'
-import BlokeBaileImage3 from '../../assets/BlokeBaile/BlokeFoto2.jpg'
-import BlokeBaileVideo2 from '../../assets/BlokeBaile/BlokeVideo2.mp4'
-import BlokeBaileVideo3 from '../../assets/BlokeBaile/BlokeVideo3.mp4'
+import BlokeBaileVideo1 from '../../assets/videos/BlokeVideo1.mp4'
+import BlokeBaileImage from '../../assets/images/projetoBloke.jpg'
+import BlokeBaileImage2 from '../../assets/images/BlokeFoto1.jpg'
+import BlokeBaileImage3 from '../../assets/images/BlokeFoto2.jpg'
+import BlokeBaileVideo2 from '../../assets/videos/BlokeVideo2.mp4'
+import BlokeBaileVideo3 from '../../assets/videos/BlokeVideo3.mp4'
 
 export function BlokeBaile() {
 const navigate = useNavigate();

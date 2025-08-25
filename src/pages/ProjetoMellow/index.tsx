@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router";
 import { useEffect } from 'react'
 import { Footer } from '../../components/Footer'
-import MellowVideo1 from '../../assets/MellowVideos/08.10.mp4'
-import MellowVideo2 from '../../assets/MellowVideos/Vídeo-Extra1.mp4'
-import MellowVideo3 from '../../assets/MellowVideos/copy-2d3392c5-33cd-4346-8cf9-edd5af855521_GAhIZAlw.mp4'
-import MellowVideo4 from '../../assets/MellowVideos/copy_47A58CCE-C400-44F3-B6AD-9D119C5B9471.mp4'
-import MellowVideo5 from '../../assets/MellowVideos/copy_AFD8021F-834B-4562-9BCD-14795B9D01AC.mp4'
-import MellowVideo6 from '../../assets/MellowVideos/videos-discos-1_nXg5EMrc.mp4'
+import MellowVideo1 from '../../assets/videos/08.10.mp4'
+import MellowVideo2 from '../../assets/videos/Vídeo-Extra1.mp4'
+import MellowVideo3 from '../../assets/videos/copy-2d3392c5-33cd-4346-8cf9-edd5af855521_GAhIZAlw.mp4'
+import MellowVideo4 from '../../assets/videos/copy_47A58CCE-C400-44F3-B6AD-9D119C5B9471.mp4'
+import MellowVideo5 from '../../assets/videos/copy_AFD8021F-834B-4562-9BCD-14795B9D01AC.mp4'
+import MellowVideo6 from '../../assets/videos/videos-discos-1_nXg5EMrc.mp4'
 
 export function MellowProject() {
     const navigate = useNavigate();

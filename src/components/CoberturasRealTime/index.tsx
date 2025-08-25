@@ -1,12 +1,12 @@
 import { motion } from "framer-motion"
 import { useEffect, useRef } from "react"
 
-import Chango from "../../assets/Chango.mp4"
-import KingsLeague from "../../assets/KingsLeague.mp4"
-import IsaMatte from "../../assets/EventoIsaMatte.mp4"
-import BaileMackenzie from "../../assets/BaileMackenzie.mp4"
-import EventoBoss from "../../assets/EventoBoss.mp4"
-import EventoCheiro from "../../assets/EventoCheiro.mp4"
+import Chango from "../../assets/videos/Chango.mp4"
+import KingsLeague from "../../assets/videos/KingsLeague.mp4"
+import IsaMatte from "../../assets/videos/EventoIsaMatte.mp4"
+import BaileMackenzie from "../../assets/videos/BaileMackenzie.mp4"
+import EventoBoss from "../../assets/videos/EventoBoss.mp4"
+import EventoCheiro from "../../assets/videos/EventoCheiro.mp4"
 
 
 type GridItem = {

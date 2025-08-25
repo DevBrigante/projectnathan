@@ -1,14 +1,14 @@
 import { motion } from "framer-motion"
 import { useState, useEffect, useRef } from "react"
-import ImageXP from "../../assets/XP.jpg"
-import ImageArsenal from "../../assets/projetoArsenal.jpg"
-import ImageBloke from "../../assets/projetoBloke.jpg"
-import ImageCopa from "../../assets/fotoCopa.jpg"
-import ImageStay from "../../assets/stay.png"
-import ImagePH from "../../assets/PHImage.jpg"
-import ImageJornada from "../../assets/Jornada.jpg"
-import ImageGR from "../../assets/fotoGrupo.jpg"
-import ImageMellow from "../../assets/fotoMellow.jpg"
+import ImageXP from "../../assets/images/XP.jpg"
+import ImageArsenal from "../../assets/images/projetoArsenal.jpg"
+import ImageBloke from "../../assets/images/projetoBloke.jpg"
+import ImageCopa from "../../assets/images/fotoCopa.jpg"
+import ImageStay from "../../assets/images/stay.png"
+import ImagePH from "../../assets/images/PHImage.jpg"
+import ImageJornada from "../../assets/images/Jornada.jpg"
+import ImageGR from "../../assets/images/fotoGrupo.jpg"
+import ImageMellow from "../../assets/images/fotoMellow.jpg"
 
 interface ImageItem {
     src: string;

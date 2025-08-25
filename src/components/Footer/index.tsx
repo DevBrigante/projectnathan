@@ -20,9 +20,14 @@ export function Footer() {
                         
                         <div className="flex items-center space-x-2">
                             <span className="text-zinc-400">Design:</span>
-                            <span className="text-white font-semibold hover:text-yellow transition-colors duration-300">
+                            <a 
+                                href="https://www.instagram.com/gabrieladifolco?igsh=MXd4bTZtdnFpMGpuaw==" 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-white font-semibold hover:text-yellow transition-colors duration-300"
+                            >
                                 Gabriela Souza
-                            </span>
+                            </a>
                         </div>
                     </div>
                     
