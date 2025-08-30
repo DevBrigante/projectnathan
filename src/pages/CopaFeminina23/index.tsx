@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router";
 import { useEffect } from 'react'
 import { Footer } from '../../components/Footer'
-import CopaFeminina23 from '../../assets/images/fotoCopa.jpg'
-import CopaFemininaVideo from '../../assets/videos/GuaranaAntartica.mp4'
+import CopaFeminina23 from '../../assets/images_convertidas/fotoCopa.jpeg'
+import CopaFemininaVideo from '../../assets/videos_convertidos/GuaranaAntartica-convertido.mp4'
 import GuaranaLogo from '../../assets/logos/guaranaLogo.png'
 import BetNacionalLogo from '../../assets/logos/betNacionalLogo.png'
 import CimedLogo from '../../assets/logos/cimedLogo.png'

@@ -7,7 +7,7 @@ import { GridImages } from "../../components/GridImages"
 import { CoberturaRealTime } from "../../components/CoberturasRealTime"
 import { ContactForm } from "../../components/ContactForm"
 import { Footer } from "../../components/Footer"
-import FotoPerfil from '../../assets/images/fotoPerfil.png'
+import FotoPerfil from "../../assets/images_convertidas/fotoPerfil-convertida.jpg"
 
 export function Home() {
     return (

@@ -8,9 +8,9 @@ import BrahmaLogo from '../../assets/logos/brahmaLogo.png'
 import ItauLogo from '../../assets/logos/itauLogo.png'
 import MastercardLogo from '../../assets/logos/mastercardLogo.png'
 import VisaLogo from '../../assets/logos/visaLogo.png'
-import Copa22Video from '../../assets/videos/videoCopa.mp4'
-import AcaoCimedVideo from '../../assets/videos/coordenacao-da-acao-capitao-cimed-mva-na-copa-do-mundo-de-2022_d32LoGEO.mp4'
-import AcaoCimedCaptacaoVideo from '../../assets/videos/coordenacao-e-captacao-da-festa-de-despedida-do-mva-para-a-copa-do-mundo-de_1LcGJUyK.mp4'
+import Copa22Video from '../../assets/videos_convertidos/videoCopa-convertido.mp4'
+import AcaoCimedVideo from '../../assets/videos_convertidos/copa-do-mundo-2022-convertido.mp4'
+import AcaoCimedCaptacaoVideo from '../../assets/videos_convertidos/festa-de-despedida-mva-convertido.mp4'
 
 
 export function CopaProject() {

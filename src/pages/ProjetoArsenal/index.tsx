@@ -1,17 +1,15 @@
 import { useNavigate } from 'react-router'
 import { useEffect } from 'react'
 import { Footer } from '../../components/Footer'
-import ImageProjetoArsenal from '../../assets/images/Projeto Arsenal_ o Clube de todos - Produção e Modelo Grupal.jpg'
-import ImageProjetoArsenal2 from '../../assets/images/Projeto Arsenal_ o Clube de todos - Produção e Modelo.jpg'
-import ProjetoArsenalVideo from '../../assets/videos/projeto-arsenal-o-clube-de-todos-producao-direcao-criativa-captacao_.mp4'
-import ImageProjetoMar from '../../assets/images/Projeto do Mar, Marseille - Produção e Modelo (1).jpg'
-import ImageProjetoMar2 from '../../assets/images/Projeto do Mar, Marseille - Produção e Modelo (2).jpg'
-import ImageProjetoMar3 from '../../assets/images/Projeto do Mar, Marseille - Produção e Modelo.jpg'
-import ProjetoVivenciaVideo from '../../assets/videos/Projeto Vivências do Futebol - Dir Criativa, Captação e Edição (1).mp4'
-import ProjetoVivenciaVideo2 from '../../assets/videos/Projeto Vivências do Futebol - Dir Criativa.mp4'
-import ProjetoVivenciaVideo3 from '../../assets/videos/Projeto Vivências do Futebol - Dir Criativa, Captação e Edição.mp4'
-
-
+import ImageProjetoArsenal from '../../assets/images_convertidas/Projeto Arsenal-convertida.jpeg'
+import ImageProjetoArsenal2 from '../../assets/images_convertidas/Projeto Arsenal(2)-convertida.jpeg'
+import ProjetoArsenalVideo from '../../assets/videos_convertidos/projeto-arsenal-convertido(1).mp4'
+import ImageProjetoMar from '../../assets/images_convertidas/fotoGrupo-convertida.jpeg'
+import ImageProjetoMar2 from '../../assets/images_convertidas/Projeto do Mar, Marseille -convertida(3).jpeg'
+import ImageProjetoMar3 from '../../assets/images_convertidas/Projeto do Mar, Marseille -convertida.jpeg'
+import ProjetoVivenciaVideo from '../../assets/videos_convertidos/Projeto Vivências do Futebol - convertido.mp4'
+import ProjetoVivenciaVideo2 from '../../assets/videos_convertidos/Projeto Vivências do Futebol _1-convertido.mp4'
+import ProjetoVivenciaVideo3 from '../../assets/videos_convertidos/Projeto Vivências do Futebol_2-convertido.mp4'
 
 export function ArsenalProject() {
     const navigate = useNavigate();

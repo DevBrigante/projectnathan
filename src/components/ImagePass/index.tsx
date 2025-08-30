@@ -1,14 +1,14 @@
 import { motion } from "framer-motion"
 import { useState, useEffect, useRef } from "react"
-import ImageXP from "../../assets/images/XP.jpg"
-import ImageArsenal from "../../assets/images/projetoArsenal.jpg"
-import ImageBloke from "../../assets/images/projetoBloke.jpg"
-import ImageCopa from "../../assets/images/fotoCopa.jpg"
-import ImageStay from "../../assets/images/stay.png"
-import ImagePH from "../../assets/images/PHImage.jpg"
-import ImageJornada from "../../assets/images/Jornada.jpg"
-import ImageGR from "../../assets/images/fotoGrupo.jpg"
-import ImageMellow from "../../assets/images/fotoMellow.jpg"
+import ImageXP from "../../assets/images_convertidas/XP.jpeg"
+import ImageArsenal from "../../assets/images_convertidas/projetoArsenal.jpeg"
+import ImageBloke from "../../assets/images_convertidas/projetoBloke.jpeg"
+import ImageCopa from "../../assets/images_convertidas/fotoCopa.jpeg"
+import ImageStay from "../../assets/images_convertidas/stay.jpg"
+import ImagePH from "../../assets/images_convertidas/PHImage.jpeg"
+import ImageJornada from "../../assets/images_convertidas/Jornada-convertida.jpeg"
+import ImageGR from "../../assets/images_convertidas/fotoGrupo-convertida.jpeg"
+import ImageMellow from "../../assets/images_convertidas/fotoMellow.jpeg"
 
 interface ImageItem {
     src: string;

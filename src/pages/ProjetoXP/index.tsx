@@ -5,9 +5,9 @@ import XPLogo from '../../assets/logos/XpLogo.png'
 import BetNacionalLogo from '../../assets/logos/betNacionalLogo.png'
 import CimedLogo from '../../assets/logos/cimedLogo.png'
 import HavaianasLogo from '../../assets/logos/havaianasLogo.png'
-import XPimage from '../../assets/images/XP.jpg'
-import HavaianasImage from '../../assets/images/Havaianas Pan.jpg'
-import CaptacaoVideo from '../../assets/videos/captacao-e-edicao-atuacao-movimento-verde-amarelo-jogos-pan-americanos-2_Xvxg1jOt.mp4'
+import XPimage from '../../assets/images_convertidas/XP.jpeg'
+import HavaianasImage from '../../assets/images_convertidas/Havaianas Pan.jpeg'
+import CaptacaoVideo from '../../assets/videos_convertidos/jogos-pan-americanos-convertido.mp4'
 
 export function ProjectXP() {
     const navigate = useNavigate();
