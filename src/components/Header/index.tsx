@@ -1,34 +1,46 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { LinkMenu } from "../LinkMenu";
 
 export function Header() {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+    // Otimizar scroll listener com throttle
+    const handleScroll = useCallback(() => {
+        const scrolled = window.scrollY > 50;
+        if (scrolled !== isScrolled) {
+            setIsScrolled(scrolled);
+        }
+    }, [isScrolled]);
+
     useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 50) {
-                setIsScrolled(true);
-            } else {
-                setIsScrolled(false);
+        // Throttle para reduzir chamadas
+        let ticking = false;
+        const throttledScroll = () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    handleScroll();
+                    ticking = false;
+                });
+                ticking = true;
             }
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', throttledScroll, { passive: true });
 
-        return () => window.removeEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', throttledScroll);
+    }, [handleScroll]);
+
+    const toggleMobileMenu = useCallback(() => {
+        setIsMobileMenuOpen(prev => !prev);
     }, []);
 
-    const toggleMobileMenu = () => {
-        setIsMobileMenuOpen(!isMobileMenuOpen);
-    };
-
-    const closeMobileMenu = () => {
+    const closeMobileMenu = useCallback(() => {
         setIsMobileMenuOpen(false);
-    };
+    }, []);
 
     return (
-        <div className={`w-full flex items-center justify-center h-20 bg-yellow fixed top-0 left-0 z-50 transition-all duration-300 ${isScrolled ? 'shadow-md' : ''}`}>
+        <div className={`w-full flex items-center justify-center h-20 bg-yellow fixed top-0 left-0 z-50 transition-all duration-200 ${isScrolled ? 'shadow-md' : ''}`}>
             <ul className="hidden md:flex w-full max-w-7xl items-center px-5 justify-between">
                 <li><LinkMenu href="#home">Nathan de Assis</LinkMenu></li>
                 <li><LinkMenu href="#servicos">Serviços</LinkMenu></li>
@@ -46,9 +58,9 @@ export function Header() {
                     className="flex flex-col justify-center items-center w-8 h-8 space-y-1 focus:outline-none"
                     aria-label="Menu"
                 >
-                    <span className={`block w-6 h-0.5 bg-black transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
-                    <span className={`block w-6 h-0.5 bg-black transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
-                    <span className={`block w-6 h-0.5 bg-black transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
+                    <span className={`block w-6 h-0.5 bg-black transition-all duration-200 ${isMobileMenuOpen ? 'rotate-45 translate-y-2' : ''}`}></span>
+                    <span className={`block w-6 h-0.5 bg-black transition-all duration-200 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+                    <span className={`block w-6 h-0.5 bg-black transition-all duration-200 ${isMobileMenuOpen ? '-rotate-45 -translate-y-2' : ''}`}></span>
                 </button>
             </div>
 
