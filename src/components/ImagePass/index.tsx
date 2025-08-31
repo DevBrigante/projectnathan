@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { useState, useEffect, useRef } from "react"
+import { useState, useEffect, useRef, useCallback } from "react"
 import ImageXP from "../../assets/images_convertidas/XP.jpeg"
 import ImageArsenal from "../../assets/images_convertidas/projetoArsenal.jpeg"
 import ImageBloke from "../../assets/images_convertidas/projetoBloke.jpeg"
@@ -33,20 +33,35 @@ export const ImagePass = () => {
     const [visibleImages, setVisibleImages] = useState<Set<number>>(new Set());
     const [carouselVisible, setCarouselVisible] = useState(false);
 
-    useEffect(() => {
-        const updateWidth = () => {
-            if (carousel.current) {
-                setWidth(carousel.current.scrollWidth - carousel.current.offsetWidth)
-            }
-        }
-
-        updateWidth()
-        window.addEventListener('resize', updateWidth)
-
-        return () => {
-            window.removeEventListener('resize', updateWidth)
+    // Otimizar updateWidth com useCallback
+    const updateWidth = useCallback(() => {
+        if (carousel.current) {
+            const newWidth = carousel.current.scrollWidth - carousel.current.offsetWidth;
+            setWidth(newWidth);
         }
     }, []);
+
+    useEffect(() => {
+        updateWidth();
+        
+        // Throttle resize listener para reduzir TBT
+        let ticking = false;
+        const throttledResize = () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    updateWidth();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        };
+
+        window.addEventListener('resize', throttledResize, { passive: true });
+
+        return () => {
+            window.removeEventListener('resize', throttledResize);
+        };
+    }, [updateWidth]);
 
     useEffect(() => {
         const carouselObserver = new IntersectionObserver((entries) => {
@@ -55,7 +70,7 @@ export const ImagePass = () => {
             }
         }, {
             root: null,
-            rootMargin: '200px',
+            rootMargin: '100px', // Reduzir margem para melhor performance
             threshold: 0.1
         });
 
@@ -69,6 +84,8 @@ export const ImagePass = () => {
     }, []);
 
     useEffect(() => {
+        if (!carouselVisible) return; // Só executar quando carousel estiver visível
+
         const imageObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 const id = entry.target.getAttribute('data-id');
@@ -82,11 +99,13 @@ export const ImagePass = () => {
             });
         }, {
             root: null,
-            rootMargin: '100px',
+            rootMargin: '50px', // Reduzir margem para melhor performance
             threshold: 0.1
         });
 
-        document.querySelectorAll('.carousel-image-container').forEach(container => {
+        // Usar querySelector mais específico
+        const containers = document.querySelectorAll('.carousel-image-container');
+        containers.forEach(container => {
             imageObserver.observe(container);
         });
 
@@ -112,19 +131,19 @@ export const ImagePass = () => {
                     dragConstraints={{ right: 0, left: -width }}
                     initial={{ x: 100 }}
                     animate={{ x: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    transition={{ duration: 0.5, ease: "easeOut" }} // Reduzir duração para melhor TBT
                 >
                     {images.map((image, index) => (
                         <motion.div
                             className="px-2 h-full flex items-center carousel-image-container"
                             key={index}
-                            whileHover={{ scale: 1.02 }}
-                            transition={{ duration: 0.3 }}
+                            whileHover={{ scale: 1.01 }} // Reduzir escala para melhor TBT
+                            transition={{ duration: 0.2 }} // Reduzir duração para melhor TBT
                             data-id={index}
                         >
                             {carouselVisible && visibleImages.has(index) ? (
                                 <img
-                                    className="h-[200px] sm:h-[250px] md:h-[300px] w-[250px] sm:w-[320px] md:w-[400px] object-cover rounded-lg pointer-events-none opacity-40 hover:opacity-60 transition-opacity duration-300"
+                                    className="h-[200px] sm:h-[250px] md:h-[300px] w-[250px] sm:w-[320px] md:w-[400px] object-cover rounded-lg pointer-events-none opacity-40 hover:opacity-60 transition-opacity duration-200" // Reduzir duração para melhor TBT
                                     src={image.src}
                                     alt={image.alt}
                                     loading="lazy"

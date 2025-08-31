@@ -14,6 +14,7 @@ export default defineConfig({
           vendor: ["react", "react-dom"],
           router: ["react-router"],
           ui: ["@remixicon/react", "motion"],
+          typing: ["typeit-react"], // Separar biblioteca pesada
         },
       },
     },

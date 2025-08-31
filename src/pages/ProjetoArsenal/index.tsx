@@ -7,9 +7,9 @@ import ProjetoArsenalVideo from '../../assets/videos_convertidos/projeto-arsenal
 import ImageProjetoMar from '../../assets/images_convertidas/fotoGrupo-convertida.jpeg'
 import ImageProjetoMar2 from '../../assets/images_convertidas/Projeto do Mar, Marseille -convertida(3).jpeg'
 import ImageProjetoMar3 from '../../assets/images_convertidas/Projeto do Mar, Marseille -convertida.jpeg'
-import ProjetoVivenciaVideo from '../../assets/videos_convertidos/Projeto Vivências do Futebol - convertido.mp4'
-import ProjetoVivenciaVideo2 from '../../assets/videos_convertidos/Projeto Vivências do Futebol _1-convertido.mp4'
-import ProjetoVivenciaVideo3 from '../../assets/videos_convertidos/Projeto Vivências do Futebol_2-convertido.mp4'
+import ProjetoVivenciaVideo from '../../assets/videos_convertidos/projeto-vivencias-futebol-1.mp4'
+import ProjetoVivenciaVideo2 from '../../assets/videos_convertidos/projeto-vivencias-futebol-2.mp4'
+import ProjetoVivenciaVideo3 from '../../assets/videos_convertidos/projeto-vivencias-futebol-3.mp4'
 
 export function ArsenalProject() {
     const navigate = useNavigate();

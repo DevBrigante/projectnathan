@@ -2,7 +2,7 @@ import { useNavigate } from "react-router";
 import { useEffect } from 'react'
 import { Footer } from '../../components/Footer'
 import MellowVideo1 from '../../assets/videos_convertidos/08.10-convertido.mp4'
-import MellowVideo2 from '../../assets/videos_convertidos/Vídeo-Extra1-convertido.mp4'
+import MellowVideo2 from '../../assets/videos_convertidos/video-extra1-convertido.mp4'
 import MellowVideo3 from '../../assets/videos_convertidos/copy-2d3392c5-convertido.mp4'
 import MellowVideo4 from '../../assets/videos_convertidos/copy_47A58-convertido.mp4'
 import MellowVideo5 from '../../assets/videos_convertidos/copy_AFD8021F-convertido.mp4'

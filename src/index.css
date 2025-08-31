@@ -57,12 +57,12 @@ body {
     animation: slideInLeft 0.6s ease-out forwards;
 }
 
-/* Otimizações para mobile - melhora TTI */
+/* Otimizações para mobile - melhora TTI e TBT */
 @media (max-width: 768px) {
   /* Reduzir animações em mobile para melhor performance */
   * {
-    animation-duration: 0.3s !important;
-    transition-duration: 0.3s !important;
+    animation-duration: 0.2s !important;
+    transition-duration: 0.2s !important;
   }
   
   /* Desabilitar hover effects em mobile */
@@ -81,6 +81,21 @@ body {
   .shadow-lg {
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
   }
+  
+  /* Desabilitar transições pesadas em mobile */
+  .transition-transform {
+    transition: none !important;
+  }
+  
+  /* Otimizar scroll performance */
+  * {
+    scroll-behavior: auto !important;
+  }
+  
+  /* Reduzir complexidade de animações */
+  .animate-pulse {
+    animation: none !important;
+  }
 }
 
 /* Preload crítico */
@@ -95,8 +110,46 @@ body {
 
 
 
+/* Melhorar performance de scroll */
+html {
+  scroll-behavior: auto; /* Remover smooth scroll */
+}
+
 /* Otimizar renderização de imagens */
 img {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+}
+
+/* Reduzir complexidade de transições */
+.transition-all {
+  transition-property: opacity, transform !important;
+}
+
+/* Otimizar animações */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Otimizações específicas para TBT */
+@media (max-width: 768px) {
+  /* Desabilitar animações complexas em mobile */
+  .motion-div {
+    transform: none !important;
+    transition: none !important;
+  }
+  
+  /* Simplificar hover effects */
+  .group:hover .group-hover\:opacity-100 {
+    opacity: 0.8 !important;
+  }
+  
+  /* Reduzir complexidade de gradientes */
+  .bg-gradient-to-b {
+    background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.3)) !important;
+  }
 }
