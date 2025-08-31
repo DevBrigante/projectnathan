@@ -12,7 +12,7 @@ export default defineConfig({
         assetFileNames: "assets/[name]-[hash].[ext]",
       },
     },
-    minify: "terser",
+    minify: "esbuild",
     sourcemap: false,
     chunkSizeWarningLimit: 1000,
   },
