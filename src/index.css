@@ -56,3 +56,47 @@ body {
 .animate-slideInLeft {
     animation: slideInLeft 0.6s ease-out forwards;
 }
+
+/* Otimizações para mobile - melhora TTI */
+@media (max-width: 768px) {
+  /* Reduzir animações em mobile para melhor performance */
+  * {
+    animation-duration: 0.3s !important;
+    transition-duration: 0.3s !important;
+  }
+  
+  /* Desabilitar hover effects em mobile */
+  .hover\:scale-105:hover {
+    transform: none !important;
+  }
+  
+  /* Otimizar font rendering */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeSpeed;
+  }
+  
+  /* Reduzir complexidade de sombras em mobile */
+  .shadow-lg {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1) !important;
+  }
+}
+
+/* Preload crítico */
+.critical {
+  font-display: swap;
+}
+
+/* Otimizações de performance */
+* {
+  box-sizing: border-box;
+}
+
+
+
+/* Otimizar renderização de imagens */
+img {
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}

@@ -1,19 +1,26 @@
+import { lazy, Suspense } from "react";
 import { Header } from "../../components/Header"
-import { ScrollToTop } from "../../components/Scrolltop"
 import { Typing } from "../../components/Typing"
-import { Accordion } from "../../components/Accordion"
-import { ImagePass } from "../../components/ImagePass"
-import { GridImages } from "../../components/GridImages"
-import { CoberturaRealTime } from "../../components/CoberturasRealTime"
 import { ContactForm } from "../../components/ContactForm"
 import { Footer } from "../../components/Footer"
 import FotoPerfil from "../../assets/images_convertidas/fotoPerfil-convertida.jpg"
 
+// Lazy loading para componentes pesados
+const Accordion = lazy(() => import("../../components/Accordion").then(module => ({ default: module.Accordion })));
+const ImagePass = lazy(() => import("../../components/ImagePass").then(module => ({ default: module.ImagePass })));
+const GridImages = lazy(() => import("../../components/GridImages").then(module => ({ default: module.GridImages })));
+const CoberturaRealTime = lazy(() => import("../../components/CoberturasRealTime").then(module => ({ default: module.CoberturaRealTime })));
+
+// Loading component otimizado
+const ComponentLoader = () => (
+  <div className="flex items-center justify-center py-8">
+    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-black"></div>
+  </div>
+);
+
 export function Home() {
     return (
         <main>
-            <ScrollToTop />
-
             <div id="home" className="w-full max-w-full flex flex-col items-center mx-auto bg-yellow pt-24">
                 <Header />
                 <div className="w-full max-w-4xl px-4 sm:px-6 md:px-8 flex text-center flex-col my-5">
@@ -29,7 +36,13 @@ export function Home() {
                     </ul>
                 </div>
                 <div className="mt-5 mb-5 px-4">
-                    <img className="w-auto h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-lg" src={FotoPerfil} style={{ filter: "brightness(1.5)" }} alt="Nathan face" />
+                    <img 
+                        className="w-auto h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-lg" 
+                        src={FotoPerfil} 
+                        style={{ filter: "brightness(1.5)" }} 
+                        alt="Nathan face"
+                        loading="eager" // Carregamento prioritário para imagem principal
+                    />
                 </div>
                 <Typing />
                 <div className="max-w-[670px] mx-auto px-4 sm:px-6">
@@ -46,13 +59,21 @@ export function Home() {
             <div id="servicos" className="bg-zinc-900 w-full max-w-full flex flex-col pt-10">
                 <div className="mx-4 sm:mx-8 md:mx-16 lg:mx-30 text-white">
                     <h2 className="font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-10 py-5">Serviços</h2>
-                    <Accordion />
+                    <Suspense fallback={<ComponentLoader />}>
+                        <Accordion />
+                    </Suspense>
                 </div>
 
                 <div id="portfolio">
-                    <ImagePass />
-                    <GridImages />
-                    <CoberturaRealTime />
+                    <Suspense fallback={<ComponentLoader />}>
+                        <ImagePass />
+                    </Suspense>
+                    <Suspense fallback={<ComponentLoader />}>
+                        <GridImages />
+                    </Suspense>
+                    <Suspense fallback={<ComponentLoader />}>
+                        <CoberturaRealTime />
+                    </Suspense>
                 </div>
             </div>
 

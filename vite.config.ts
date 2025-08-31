@@ -10,11 +10,19 @@ export default defineConfig({
         entryFileNames: "assets/[name]-[hash].js",
         chunkFileNames: "assets/[name]-[hash].js",
         assetFileNames: "assets/[name]-[hash].[ext]",
+        manualChunks: {
+          vendor: ["react", "react-dom"],
+          router: ["react-router"],
+          ui: ["@remixicon/react", "motion"],
+        },
       },
     },
     minify: "esbuild",
     sourcemap: false,
     chunkSizeWarningLimit: 1000,
+    target: "es2015",
+    cssCodeSplit: true,
+    assetsInlineLimit: 4096,
   },
 
   preview: {
